@@ -31,7 +31,7 @@ In this lab, we are going to write a Python program which can generate a network
 
 > * Show the screenshot of using iPerf command in Mininet
 9. Result of running iPerf in Mininet:
-![iPerf.png](https://github.com/nctucn/lab2-f0urseas0ns/blob/master/src/out/iperf.PNG)
+![iPerf.png](https://github.com/f0urseas0ns/networks-lab-2/blob/master/src/out/iperf.PNG)
 
 ---
 ## Description
@@ -41,23 +41,23 @@ In this lab, we are going to write a Python program which can generate a network
 > TODO:
 > * Describe the meaning of Mininet API in Python you used in detail
 1.
-![init.png](https://github.com/nctucn/lab2-f0urseas0ns/blob/master/screenshots/custom.PNG)
+![init.png](https://github.com/f0urseas0ns/networks-lab-2/blob/master/screenshots/custom.PNG)
   - Define a custom topology for use in a network (topo1.png)
 
 2.
-![switch.png](https://github.com/nctucn/lab2-f0urseas0ns/blob/master/screenshots/switch.PNG)
+![switch.png](https://github.com/f0urseas0ns/networks-lab-2/blob/master/screenshots/switch.PNG)
   - `self.addsSwitch`: Create and add a switch to the topology
 
 3.
-![host.png](https://github.com/nctucn/lab2-f0urseas0ns/blob/master/screenshots/hosts.PNG)
+![host.png](https://github.com/f0urseas0ns/networks-lab-2/blob/master/screenshots/hosts.PNG)
   - `self.addHost`: Create and add a host to the topology
 
 4.
-![link.png](https://github.com/nctucn/lab2-f0urseas0ns/blob/master/screenshots/links.PNG)
-  - `self.addLink(host, switch, bw, delay, loss)`: Create a birectional link between the specified host/switch and switch in [topo1](https://github.com/nctucn/lab2-f0urseas0ns/blob/master/src/topo/topo1.png), and specifies the bandwidth in Mbits, delay in ms and pecentage loss of that connection
+![link.png](https://github.com/f0urseas0ns/networks-lab-2/blob/master/screenshots/links.PNG)
+  - `self.addLink(host, switch, bw, delay, loss)`: Create a birectional link between the specified host/switch and switch in [topo1](https://github.com/f0urseas0ns/networks-lab-2/blob/master/src/topo/topo1.png), and specifies the bandwidth in Mbits, delay in ms and pecentage loss of that connection
 
 5.
-![simpletest.png](https://github.com/nctucn/lab2-f0urseas0ns/blob/master/screenshots/simpletest.PNG)
+![simpletest.png](https://github.com/f0urseas0ns/networks-lab-2/blob/master/screenshots/simpletest.PNG)
   - Create a network using the custom topology
   - `topo = CustomTopo()`: Create an instance of the custom topology with 6 hosts and 9 switches
   - `net = Mininet(topo = topo, controller = OvSController, link = TCLink)`: Create a new network using the custom topo, OvS controller and TCLink
@@ -89,7 +89,7 @@ In this lab, we are going to write a Python program which can generate a network
 > * Describe how you finish this work step-by-step in detail
 
 1. **Environment Setup**
-  - I first connected to my container via Secure Shell (SSH) through PieTTY. Using the user and password credentials **`root`** and **`cn2018`**, I connected to IP address **`140.113.195.69`** on **`port 45078`**. Once I was successfully logged onto my container, I cloned my working GitHub repository to a new directory called **`"Network_Topology"`**. This was done using the command `git clone https://github.com/nctucn/lab2-f0urseas0ns.git`. To confirm that my files were cloned successfully, I checked that the correct directory with right files existed using the command `ls`.
+  - I first connected to my container via Secure Shell (SSH) through PieTTY. Using the user and password credentials **`root`** and **`cn2018`**, I connected to IP address **`140.113.195.69`** on **`port 45078`**. Once I was successfully logged onto my container, I cloned my working GitHub repository to a new directory called **`"Network_Topology"`**. This was done using the command `git clone https://github.com/f0urseas0ns/networks-lab-2.git`. To confirm that my files were cloned successfully, I checked that the correct directory with right files existed using the command `ls`.
   - Once I have successfully cloned the GitHub repository, I then checked that Mininet was running properly. This was done through the command `sudo mn` which opens Mininet in the terminal. An error message appeared saying that there was an error in connecting to Open vSwith database server. Since this was an error due to Open vSwitch service not being started, this error was easily fixed with the command `open vswitch-switch start` which starts the affected service.
   - Once I have verified that Open vSwitch is running properly, I then changed the working directory to the **src** folder of **Network_Topology** through the command `cd /root/Network_Topology/src/`. I then changed the permission of **`example.py`** via the command `sudo chmod +x example.py` and then executed the python program with `sudo ./example.py`.
 
@@ -143,7 +143,7 @@ In this lab, we are going to write a Python program which can generate a network
 > TODO:
 > * Please replace "YOUR_NAME" and "YOUR_GITHUB_LINK" into yours
 
-* [Thomas Ng](https://github.com/nctucn/lab2-f0urseas0ns)
+* [Thomas Ng](https://github.com/f0urseas0ns/networks-lab-2)
 * [David Lu](https://github.com/yungshenglu)
 
 ---
